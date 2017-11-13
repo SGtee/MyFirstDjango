@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0yt(-(enkws+y=9h@_)6g#@!$l@i5iqqfrib@=&&izf-(99^80'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1','localhost','.sgtee.studio']
+DEBUG = True
+ALLOWED_HOSTS = ['127.0.0.1','localhost','.sgtee.cc']
 
 
 # Application definition
