@@ -23,8 +23,16 @@ class Post(models.Model):
     category=models.ForeignKey(Category)
     tags=models.ManyToManyField(Tag,blank=True)
     author=models.ForeignKey(User)
+
+    #新增views字段记录阅读量
+    views=models.PositiveIntegerField(default=0)
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         return reverse('blog:detail',kwargs={'pk':self.pk})
+
+    #增加模型方法
+    def increase_views(self):
+        self.views+=1
+        self.save(update_fields=['views'])
